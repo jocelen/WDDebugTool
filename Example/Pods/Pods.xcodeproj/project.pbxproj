@@ -1,0 +1,852 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16F9CC3F7A119ED10C6C50B7EDD63F86 /* WDDebugMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5688F811BCF7AA985F7BB58D9148A9 /* WDDebugMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		219008FD4CAC39243FD03613104ED3FF /* Pods-WDDebugTool_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE251235F9BA0756D820A6B2A8465735 /* Pods-WDDebugTool_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24934371E38CC8BAA7685A98CADEEA41 /* WDDebugConsoleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953BED1713C25ACAB77E61B999AAF91 /* WDDebugConsoleLabel.m */; };
+		2B8B9B93539261204EB3A3FE968BEC07 /* WDDebugFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 59361E5483B663BA0F9455C419FB08CE /* WDDebugFPSMonitor.m */; };
+		2CCF82636D0B8E921D05A2195545DDE1 /* WDDebugTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B06D167CF66A72F281F4E5335537C49 /* WDDebugTool-dummy.m */; };
+		325D51BE51909D1FFC4A156B4E9C2EAE /* WDDebugTempController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8230382AEFBE18D6140DEB66D9D4F4A9 /* WDDebugTempController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A0E97D1BD0CA4E0C030BF921F75C28C /* Pods-WDDebugTool_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFEE4A848AE3F63B8F21E3BCFACCE77 /* Pods-WDDebugTool_Tests-dummy.m */; };
+		653186E964A1E25A6ECC9BFDE9C2EA25 /* WDDebugTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E13C13FF39B98FAB2CFD996632F208B /* WDDebugTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7074CF612A80D15681A3EECA78A6A612 /* WDDebugMemoryMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F73DA84639FC9A960BE3F5718CCE2DD /* WDDebugMemoryMonitor.m */; };
+		75C114D7E59C7C5E53998C936BBDF1C7 /* WDDebugFPSMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = A26F4EA81E0FEB0C3A2E2C45B2FB339F /* WDDebugFPSMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8852E7BD9649F34C6105DE0D84E74674 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		95EFB4BA7129FAC295AC8E8ACA4B8D5A /* WDDebugCpuMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B97234E55609B38991C167FDF576545 /* WDDebugCpuMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A9F2D47C846FFB5B056057D85003255 /* WDDebugCpuMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1F281064DFFA23DA4C6BDF9EA01C10 /* WDDebugCpuMonitor.m */; };
+		A28F5D6EE442D4A6FCEEAF93C5089D25 /* Pods-WDDebugTool_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A413DCB4EC99A40044A275935DFDB /* Pods-WDDebugTool_Example-dummy.m */; };
+		B95A985E99ECE389147104C7F711641B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		BDFF5409530A21E5186BD68D2D457B6F /* Pods-WDDebugTool_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F551DF298CE446C04EC5599E8CD9F4ED /* Pods-WDDebugTool_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6B4C41C92A4DF0B0F38D0FB973D7B41 /* WDDebugConsoleLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = E41096A822A26D06FBBAA35235148FBC /* WDDebugConsoleLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2F7096278A991CC4E9480850881BE55 /* WDDebugToolManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BAF7E88E24161C526E7D12F2E3E8AC /* WDDebugToolManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6FCF797EA5F7F868D1647FFF38C213A /* WDDebugMemoryMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A34D4DEBFAA30FEDE3CB71FE62DF803 /* WDDebugMemoryMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB582ECC1C426C26054051D69C5FB87D /* WDDebugMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C47440447E593EBC6D27A04F01F44 /* WDDebugMonitor.m */; };
+		DD05D1EB1484346DCFA0FCA9A168A867 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E3264AB3C8DA70D054926B3CC08F42D9 /* WDDebugToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F48B0B17E46ACEF79FA112C9623CB7D /* WDDebugToolManager.m */; };
+		FCE74B48A20B13BB1D7DF5B44ECD864D /* WDDebugTempController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D185A1B30D17D0F90F4ABDEC0B05CDF /* WDDebugTempController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F41D6A0513A23EC14CE143317767096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10510CF131141419DF0EA222F9A811A3;
+			remoteInfo = "Pods-WDDebugTool_Example";
+		};
+		D76463D6824C6150612E4F6225A8ACFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CE6AA0BF9631A3F6860C470BAC8C2CC;
+			remoteInfo = WDDebugTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04C5E3DD5EA2D5E4F771D8CF7CAA1AAF /* WDDebugTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WDDebugTool.modulemap; sourceTree = "<group>"; };
+		04EB421ADDB3EDA0490C0DC61413424D /* Pods-WDDebugTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WDDebugTool_Example.release.xcconfig"; sourceTree = "<group>"; };
+		06B3CFEA9EFAA35E821F4D9C064366E8 /* Pods-WDDebugTool_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WDDebugTool_Tests.modulemap"; sourceTree = "<group>"; };
+		0A34D4DEBFAA30FEDE3CB71FE62DF803 /* WDDebugMemoryMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WDDebugMemoryMonitor.h; path = WDDebugTool/Classes/WDDebugMemoryMonitor.h; sourceTree = "<group>"; };
+		0B06D167CF66A72F281F4E5335537C49 /* WDDebugTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WDDebugTool-dummy.m"; sourceTree = "<group>"; };
+		0F1F281064DFFA23DA4C6BDF9EA01C10 /* WDDebugCpuMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WDDebugCpuMonitor.m; path = WDDebugTool/Classes/WDDebugCpuMonitor.m; sourceTree = "<group>"; };
+		1953BED1713C25ACAB77E61B999AAF91 /* WDDebugConsoleLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WDDebugConsoleLabel.m; path = WDDebugTool/Classes/WDDebugConsoleLabel.m; sourceTree = "<group>"; };
+		1C0A413DCB4EC99A40044A275935DFDB /* Pods-WDDebugTool_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WDDebugTool_Example-dummy.m"; sourceTree = "<group>"; };
+		1E1C47440447E593EBC6D27A04F01F44 /* WDDebugMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WDDebugMonitor.m; path = WDDebugTool/Classes/WDDebugMonitor.m; sourceTree = "<group>"; };
+		224C924F13AFA38E2291C7E1BCA1441B /* Pods-WDDebugTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WDDebugTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		29B7AAB0810996CE7C1B02BD61DD5DDD /* WDDebugTool.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WDDebugTool.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2B97234E55609B38991C167FDF576545 /* WDDebugCpuMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WDDebugCpuMonitor.h; path = WDDebugTool/Classes/WDDebugCpuMonitor.h; sourceTree = "<group>"; };
+		3D185A1B30D17D0F90F4ABDEC0B05CDF /* WDDebugTempController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WDDebugTempController.m; path = WDDebugTool/Classes/WDDebugTempController.m; sourceTree = "<group>"; };
+		3E13C13FF39B98FAB2CFD996632F208B /* WDDebugTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WDDebugTool-umbrella.h"; sourceTree = "<group>"; };
+		40A33BC464062D69ABA7E7486AC3D63D /* Pods-WDDebugTool_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WDDebugTool_Tests"; path = Pods_WDDebugTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E4F7D3CDFEB076A5592BABFF068D08 /* WDDebugTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WDDebugTool.debug.xcconfig; sourceTree = "<group>"; };
+		4B4D5623CCD0D411FD316C709A4D73F8 /* Pods-WDDebugTool_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WDDebugTool_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		52DF007C947A895A65309890C286385A /* Pods-WDDebugTool_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WDDebugTool_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		59361E5483B663BA0F9455C419FB08CE /* WDDebugFPSMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WDDebugFPSMonitor.m; path = WDDebugTool/Classes/WDDebugFPSMonitor.m; sourceTree = "<group>"; };
+		651B0443115510BAEA6719FB240B1AF2 /* WDDebugTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WDDebugTool-Info.plist"; sourceTree = "<group>"; };
+		683E29C061397470DA90C03EB48D5532 /* Pods-WDDebugTool_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WDDebugTool_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8230382AEFBE18D6140DEB66D9D4F4A9 /* WDDebugTempController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WDDebugTempController.h; path = WDDebugTool/Classes/WDDebugTempController.h; sourceTree = "<group>"; };
+		864194B43ADBCFF3FE93CEA55953F3C6 /* WDDebugTool */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WDDebugTool; path = WDDebugTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AFEE4A848AE3F63B8F21E3BCFACCE77 /* Pods-WDDebugTool_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WDDebugTool_Tests-dummy.m"; sourceTree = "<group>"; };
+		8C6D110B5F1956E08759B843249F9DCA /* Pods-WDDebugTool_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WDDebugTool_Tests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F48B0B17E46ACEF79FA112C9623CB7D /* WDDebugToolManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WDDebugToolManager.m; path = WDDebugTool/Classes/WDDebugToolManager.m; sourceTree = "<group>"; };
+		9F73DA84639FC9A960BE3F5718CCE2DD /* WDDebugMemoryMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WDDebugMemoryMonitor.m; path = WDDebugTool/Classes/WDDebugMemoryMonitor.m; sourceTree = "<group>"; };
+		9FDEDEC42F6809FEB7067487ED384946 /* Pods-WDDebugTool_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WDDebugTool_Example"; path = Pods_WDDebugTool_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A26F4EA81E0FEB0C3A2E2C45B2FB339F /* WDDebugFPSMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WDDebugFPSMonitor.h; path = WDDebugTool/Classes/WDDebugFPSMonitor.h; sourceTree = "<group>"; };
+		BC5688F811BCF7AA985F7BB58D9148A9 /* WDDebugMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WDDebugMonitor.h; path = WDDebugTool/Classes/WDDebugMonitor.h; sourceTree = "<group>"; };
+		BE251235F9BA0756D820A6B2A8465735 /* Pods-WDDebugTool_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WDDebugTool_Tests-umbrella.h"; sourceTree = "<group>"; };
+		C88171248DD9E2573D8C7CF373757B00 /* WDDebugTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WDDebugTool.release.xcconfig; sourceTree = "<group>"; };
+		C9BAF7E88E24161C526E7D12F2E3E8AC /* WDDebugToolManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WDDebugToolManager.h; path = WDDebugTool/Classes/WDDebugToolManager.h; sourceTree = "<group>"; };
+		CC05D39DB7C886BF8699593BA8A30CF1 /* Pods-WDDebugTool_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WDDebugTool_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		CD405C9549872E7E4308180C74064627 /* Pods-WDDebugTool_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WDDebugTool_Example-Info.plist"; sourceTree = "<group>"; };
+		CE7C3627EC841C39F9FB984CF1ACB9EC /* Pods-WDDebugTool_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WDDebugTool_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D2E35394A9761793EBBFD99D277E72B7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D323E2283594ADDAC76E6FC611940379 /* Pods-WDDebugTool_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WDDebugTool_Example-frameworks.sh"; sourceTree = "<group>"; };
+		DE062BC3D564349ACC8C91D67B21B383 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E41096A822A26D06FBBAA35235148FBC /* WDDebugConsoleLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WDDebugConsoleLabel.h; path = WDDebugTool/Classes/WDDebugConsoleLabel.h; sourceTree = "<group>"; };
+		E6050BE32ED2998B93FB57ACAC3467E1 /* Pods-WDDebugTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WDDebugTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F551DF298CE446C04EC5599E8CD9F4ED /* Pods-WDDebugTool_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WDDebugTool_Example-umbrella.h"; sourceTree = "<group>"; };
+		F562CD3EEACB2069F86624EDEEC99E88 /* Pods-WDDebugTool_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WDDebugTool_Example.modulemap"; sourceTree = "<group>"; };
+		F9E11017CF791AC46152D91D88B2944B /* WDDebugTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WDDebugTool-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04E898BDAFE85C411C2D66415CC8EE1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95A985E99ECE389147104C7F711641B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A649D087B430B299F68209C839378AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD05D1EB1484346DCFA0FCA9A168A867 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4970CAADAB590F5F89E483226F710A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8852E7BD9649F34C6105DE0D84E74674 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D891B934697A8BE82C27D013C892B60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FDEDEC42F6809FEB7067487ED384946 /* Pods-WDDebugTool_Example */,
+				40A33BC464062D69ABA7E7486AC3D63D /* Pods-WDDebugTool_Tests */,
+				864194B43ADBCFF3FE93CEA55953F3C6 /* WDDebugTool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5A53FDEA927CC93739A8F27186F2A0A3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB5A3EC6C6A3A72A9BAA80A70D8D30F3 /* Pods-WDDebugTool_Example */,
+				E965B233E5C9C16897E558A67DFBD64C /* Pods-WDDebugTool_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6A437676CD0ED7E23290B5D112DE998D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFCE3B35ADBF2E48C075F289C83C5B04 /* WDDebugTool */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		80785E9AD92997B34211026FB0FC9229 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				04C5E3DD5EA2D5E4F771D8CF7CAA1AAF /* WDDebugTool.modulemap */,
+				0B06D167CF66A72F281F4E5335537C49 /* WDDebugTool-dummy.m */,
+				651B0443115510BAEA6719FB240B1AF2 /* WDDebugTool-Info.plist */,
+				F9E11017CF791AC46152D91D88B2944B /* WDDebugTool-prefix.pch */,
+				3E13C13FF39B98FAB2CFD996632F208B /* WDDebugTool-umbrella.h */,
+				42E4F7D3CDFEB076A5592BABFF068D08 /* WDDebugTool.debug.xcconfig */,
+				C88171248DD9E2573D8C7CF373757B00 /* WDDebugTool.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WDDebugTool";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				6A437676CD0ED7E23290B5D112DE998D /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				3D891B934697A8BE82C27D013C892B60 /* Products */,
+				5A53FDEA927CC93739A8F27186F2A0A3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E965B233E5C9C16897E558A67DFBD64C /* Pods-WDDebugTool_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				06B3CFEA9EFAA35E821F4D9C064366E8 /* Pods-WDDebugTool_Tests.modulemap */,
+				4B4D5623CCD0D411FD316C709A4D73F8 /* Pods-WDDebugTool_Tests-acknowledgements.markdown */,
+				CE7C3627EC841C39F9FB984CF1ACB9EC /* Pods-WDDebugTool_Tests-acknowledgements.plist */,
+				8AFEE4A848AE3F63B8F21E3BCFACCE77 /* Pods-WDDebugTool_Tests-dummy.m */,
+				8C6D110B5F1956E08759B843249F9DCA /* Pods-WDDebugTool_Tests-Info.plist */,
+				BE251235F9BA0756D820A6B2A8465735 /* Pods-WDDebugTool_Tests-umbrella.h */,
+				52DF007C947A895A65309890C286385A /* Pods-WDDebugTool_Tests.debug.xcconfig */,
+				E6050BE32ED2998B93FB57ACAC3467E1 /* Pods-WDDebugTool_Tests.release.xcconfig */,
+			);
+			name = "Pods-WDDebugTool_Tests";
+			path = "Target Support Files/Pods-WDDebugTool_Tests";
+			sourceTree = "<group>";
+		};
+		EFCE3B35ADBF2E48C075F289C83C5B04 /* WDDebugTool */ = {
+			isa = PBXGroup;
+			children = (
+				E41096A822A26D06FBBAA35235148FBC /* WDDebugConsoleLabel.h */,
+				1953BED1713C25ACAB77E61B999AAF91 /* WDDebugConsoleLabel.m */,
+				2B97234E55609B38991C167FDF576545 /* WDDebugCpuMonitor.h */,
+				0F1F281064DFFA23DA4C6BDF9EA01C10 /* WDDebugCpuMonitor.m */,
+				A26F4EA81E0FEB0C3A2E2C45B2FB339F /* WDDebugFPSMonitor.h */,
+				59361E5483B663BA0F9455C419FB08CE /* WDDebugFPSMonitor.m */,
+				0A34D4DEBFAA30FEDE3CB71FE62DF803 /* WDDebugMemoryMonitor.h */,
+				9F73DA84639FC9A960BE3F5718CCE2DD /* WDDebugMemoryMonitor.m */,
+				BC5688F811BCF7AA985F7BB58D9148A9 /* WDDebugMonitor.h */,
+				1E1C47440447E593EBC6D27A04F01F44 /* WDDebugMonitor.m */,
+				8230382AEFBE18D6140DEB66D9D4F4A9 /* WDDebugTempController.h */,
+				3D185A1B30D17D0F90F4ABDEC0B05CDF /* WDDebugTempController.m */,
+				C9BAF7E88E24161C526E7D12F2E3E8AC /* WDDebugToolManager.h */,
+				9F48B0B17E46ACEF79FA112C9623CB7D /* WDDebugToolManager.m */,
+				F5DB5458C476FCB84D844F0A3EB26679 /* Pod */,
+				80785E9AD92997B34211026FB0FC9229 /* Support Files */,
+			);
+			name = WDDebugTool;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		F5DB5458C476FCB84D844F0A3EB26679 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				DE062BC3D564349ACC8C91D67B21B383 /* LICENSE */,
+				D2E35394A9761793EBBFD99D277E72B7 /* README.md */,
+				29B7AAB0810996CE7C1B02BD61DD5DDD /* WDDebugTool.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		FB5A3EC6C6A3A72A9BAA80A70D8D30F3 /* Pods-WDDebugTool_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F562CD3EEACB2069F86624EDEEC99E88 /* Pods-WDDebugTool_Example.modulemap */,
+				683E29C061397470DA90C03EB48D5532 /* Pods-WDDebugTool_Example-acknowledgements.markdown */,
+				CC05D39DB7C886BF8699593BA8A30CF1 /* Pods-WDDebugTool_Example-acknowledgements.plist */,
+				1C0A413DCB4EC99A40044A275935DFDB /* Pods-WDDebugTool_Example-dummy.m */,
+				D323E2283594ADDAC76E6FC611940379 /* Pods-WDDebugTool_Example-frameworks.sh */,
+				CD405C9549872E7E4308180C74064627 /* Pods-WDDebugTool_Example-Info.plist */,
+				F551DF298CE446C04EC5599E8CD9F4ED /* Pods-WDDebugTool_Example-umbrella.h */,
+				224C924F13AFA38E2291C7E1BCA1441B /* Pods-WDDebugTool_Example.debug.xcconfig */,
+				04EB421ADDB3EDA0490C0DC61413424D /* Pods-WDDebugTool_Example.release.xcconfig */,
+			);
+			name = "Pods-WDDebugTool_Example";
+			path = "Target Support Files/Pods-WDDebugTool_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3F6864964A743734289BDB5DFAE00E25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B4C41C92A4DF0B0F38D0FB973D7B41 /* WDDebugConsoleLabel.h in Headers */,
+				95EFB4BA7129FAC295AC8E8ACA4B8D5A /* WDDebugCpuMonitor.h in Headers */,
+				75C114D7E59C7C5E53998C936BBDF1C7 /* WDDebugFPSMonitor.h in Headers */,
+				D6FCF797EA5F7F868D1647FFF38C213A /* WDDebugMemoryMonitor.h in Headers */,
+				16F9CC3F7A119ED10C6C50B7EDD63F86 /* WDDebugMonitor.h in Headers */,
+				325D51BE51909D1FFC4A156B4E9C2EAE /* WDDebugTempController.h in Headers */,
+				653186E964A1E25A6ECC9BFDE9C2EA25 /* WDDebugTool-umbrella.h in Headers */,
+				D2F7096278A991CC4E9480850881BE55 /* WDDebugToolManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		643EC107219C1926FDABD5D7AF7E0713 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				219008FD4CAC39243FD03613104ED3FF /* Pods-WDDebugTool_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D65D31A5341DD7F91215AD1A742B0B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDFF5409530A21E5186BD68D2D457B6F /* Pods-WDDebugTool_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		10510CF131141419DF0EA222F9A811A3 /* Pods-WDDebugTool_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9A5AB8D48DBE4222E362B2C1093B4EE /* Build configuration list for PBXNativeTarget "Pods-WDDebugTool_Example" */;
+			buildPhases = (
+				8D65D31A5341DD7F91215AD1A742B0B2 /* Headers */,
+				DE7CDFB2FE2AC28D9490DF88244AD662 /* Sources */,
+				04E898BDAFE85C411C2D66415CC8EE1C /* Frameworks */,
+				D8717C76108AE6D3D25F9C65A9C21F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				193062168E4877895DC125DF723CE09D /* PBXTargetDependency */,
+			);
+			name = "Pods-WDDebugTool_Example";
+			productName = Pods_WDDebugTool_Example;
+			productReference = 9FDEDEC42F6809FEB7067487ED384946 /* Pods-WDDebugTool_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		5CE6AA0BF9631A3F6860C470BAC8C2CC /* WDDebugTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1D22C3337B65C55694B60E481D14094 /* Build configuration list for PBXNativeTarget "WDDebugTool" */;
+			buildPhases = (
+				3F6864964A743734289BDB5DFAE00E25 /* Headers */,
+				760133E96858CD8175B322BAC1C8F551 /* Sources */,
+				C4970CAADAB590F5F89E483226F710A6 /* Frameworks */,
+				ABF62E64C8ED004918BDB7DEE2F7DFB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WDDebugTool;
+			productName = WDDebugTool;
+			productReference = 864194B43ADBCFF3FE93CEA55953F3C6 /* WDDebugTool */;
+			productType = "com.apple.product-type.framework";
+		};
+		FE8179576DD9F96F52C5E26019FED4A1 /* Pods-WDDebugTool_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5559E62F78CC458BF6285330568452F /* Build configuration list for PBXNativeTarget "Pods-WDDebugTool_Tests" */;
+			buildPhases = (
+				643EC107219C1926FDABD5D7AF7E0713 /* Headers */,
+				128A7AE8106546B201BB935C78BD3DFA /* Sources */,
+				6A649D087B430B299F68209C839378AD /* Frameworks */,
+				16D1F355781AA34610D007160656FF23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E451E2A5F0CCF17C18595539E538F30B /* PBXTargetDependency */,
+			);
+			name = "Pods-WDDebugTool_Tests";
+			productName = Pods_WDDebugTool_Tests;
+			productReference = 40A33BC464062D69ABA7E7486AC3D63D /* Pods-WDDebugTool_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 3D891B934697A8BE82C27D013C892B60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10510CF131141419DF0EA222F9A811A3 /* Pods-WDDebugTool_Example */,
+				FE8179576DD9F96F52C5E26019FED4A1 /* Pods-WDDebugTool_Tests */,
+				5CE6AA0BF9631A3F6860C470BAC8C2CC /* WDDebugTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16D1F355781AA34610D007160656FF23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABF62E64C8ED004918BDB7DEE2F7DFB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8717C76108AE6D3D25F9C65A9C21F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		128A7AE8106546B201BB935C78BD3DFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0E97D1BD0CA4E0C030BF921F75C28C /* Pods-WDDebugTool_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		760133E96858CD8175B322BAC1C8F551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24934371E38CC8BAA7685A98CADEEA41 /* WDDebugConsoleLabel.m in Sources */,
+				9A9F2D47C846FFB5B056057D85003255 /* WDDebugCpuMonitor.m in Sources */,
+				2B8B9B93539261204EB3A3FE968BEC07 /* WDDebugFPSMonitor.m in Sources */,
+				7074CF612A80D15681A3EECA78A6A612 /* WDDebugMemoryMonitor.m in Sources */,
+				DB582ECC1C426C26054051D69C5FB87D /* WDDebugMonitor.m in Sources */,
+				FCE74B48A20B13BB1D7DF5B44ECD864D /* WDDebugTempController.m in Sources */,
+				2CCF82636D0B8E921D05A2195545DDE1 /* WDDebugTool-dummy.m in Sources */,
+				E3264AB3C8DA70D054926B3CC08F42D9 /* WDDebugToolManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE7CDFB2FE2AC28D9490DF88244AD662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28F5D6EE442D4A6FCEEAF93C5089D25 /* Pods-WDDebugTool_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		193062168E4877895DC125DF723CE09D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WDDebugTool;
+			target = 5CE6AA0BF9631A3F6860C470BAC8C2CC /* WDDebugTool */;
+			targetProxy = D76463D6824C6150612E4F6225A8ACFB /* PBXContainerItemProxy */;
+		};
+		E451E2A5F0CCF17C18595539E538F30B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WDDebugTool_Example";
+			target = 10510CF131141419DF0EA222F9A811A3 /* Pods-WDDebugTool_Example */;
+			targetProxy = 9F41D6A0513A23EC14CE143317767096 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6D3D4A7292E04F278E8AEE78AF87E2B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C88171248DD9E2573D8C7CF373757B00 /* WDDebugTool.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WDDebugTool/WDDebugTool-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WDDebugTool/WDDebugTool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WDDebugTool/WDDebugTool.modulemap";
+				PRODUCT_MODULE_NAME = WDDebugTool;
+				PRODUCT_NAME = WDDebugTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		927DE0732A87537CCD85CC32F21A7ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52DF007C947A895A65309890C286385A /* Pods-WDDebugTool_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WDDebugTool_Tests/Pods-WDDebugTool_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WDDebugTool_Tests/Pods-WDDebugTool_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B379208A9F34CD3EF7378755CA46294D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 224C924F13AFA38E2291C7E1BCA1441B /* Pods-WDDebugTool_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WDDebugTool_Example/Pods-WDDebugTool_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WDDebugTool_Example/Pods-WDDebugTool_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B6CCFC6E725E242758EE7B230F46404E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E4F7D3CDFEB076A5592BABFF068D08 /* WDDebugTool.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WDDebugTool/WDDebugTool-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WDDebugTool/WDDebugTool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WDDebugTool/WDDebugTool.modulemap";
+				PRODUCT_MODULE_NAME = WDDebugTool;
+				PRODUCT_NAME = WDDebugTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BAB5FB534E80EDBA3513141262F369A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04EB421ADDB3EDA0490C0DC61413424D /* Pods-WDDebugTool_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WDDebugTool_Example/Pods-WDDebugTool_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WDDebugTool_Example/Pods-WDDebugTool_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F151C865A438825480388FBC33A65CBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6050BE32ED2998B93FB57ACAC3467E1 /* Pods-WDDebugTool_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WDDebugTool_Tests/Pods-WDDebugTool_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WDDebugTool_Tests/Pods-WDDebugTool_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9A5AB8D48DBE4222E362B2C1093B4EE /* Build configuration list for PBXNativeTarget "Pods-WDDebugTool_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B379208A9F34CD3EF7378755CA46294D /* Debug */,
+				BAB5FB534E80EDBA3513141262F369A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1D22C3337B65C55694B60E481D14094 /* Build configuration list for PBXNativeTarget "WDDebugTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6CCFC6E725E242758EE7B230F46404E /* Debug */,
+				6D3D4A7292E04F278E8AEE78AF87E2B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5559E62F78CC458BF6285330568452F /* Build configuration list for PBXNativeTarget "Pods-WDDebugTool_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				927DE0732A87537CCD85CC32F21A7ADC /* Debug */,
+				F151C865A438825480388FBC33A65CBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

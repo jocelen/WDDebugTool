@@ -1,0 +1,6 @@
+framework module WDDebugTool {
+  umbrella header "WDDebugTool-umbrella.h"
+
+  export *
+  module * { export * }
+}
