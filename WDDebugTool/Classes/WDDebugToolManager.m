@@ -12,19 +12,10 @@
 #import "WDDebugConsoleLabel.h"
 #import "WDDebugTempController.h"
 
-#define kDebugScreenWidth [UIScreen mainScreen].bounds.size.width
-
-static inline CGFloat debugTool_safeEdgeTopMargin(void) {
-    if (@available(iOS 11.0, *))
-    {
-        return [[UIApplication sharedApplication] delegate].window.safeAreaInsets.top;
-    }
-    return 0;
-}
-
 static NSInteger const kDebugLabelWidth = 70;
 static NSInteger const kDebugLabelHeight = 20;
 static NSInteger const KDebugMargin = 20;
+static NSInteger const KDebugWindowWidth = kDebugLabelWidth*3 + KDebugMargin*2;
 
 @interface WDDebugToolManager()
 @property (nonatomic, assign) BOOL isShowing;
@@ -89,10 +80,17 @@ static id _instance;
 #pragma mark - Window
 
 - (void)setDebugWindow {
-    self.debugWindow = [[UIWindow alloc] initWithFrame:CGRectMake(0, debugTool_safeEdgeTopMargin() - 10, kDebugScreenWidth, kDebugLabelHeight)];
+    self.debugWindow = [[UIWindow alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-KDebugWindowWidth)/2, 20, KDebugWindowWidth, kDebugLabelHeight)];
     self.debugWindow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
     self.debugWindow.windowLevel = UIWindowLevelAlert;
-    self.debugWindow.rootViewController = [WDDebugTempController new];
+    WDDebugTempController * vc = [WDDebugTempController new];
+    /// 更新安全距离
+    __weak typeof(self) weakSelf = self;
+    vc.safeAreaInsetsDidChangeBlock = ^(UIEdgeInsets safeAreaInsets) {
+        CGFloat originY = safeAreaInsets.top > 0 ? safeAreaInsets.top - kDebugLabelHeight/2 : kDebugLabelHeight/2;
+        weakSelf.debugWindow.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-KDebugWindowWidth)/2, originY, KDebugWindowWidth, kDebugLabelHeight);
+    };
+    self.debugWindow.rootViewController = vc;
     self.debugWindow.hidden = NO;
 }
 
@@ -126,11 +124,11 @@ static id _instance;
     [self.debugWindow addSubview:consoleLabel];
     CGRect consoleLabelFrame = CGRectZero;
     if (consoleLabel == self.cpuLabel) {
-        consoleLabelFrame = CGRectMake((kDebugScreenWidth - kDebugLabelWidth) / 2, 0, kDebugLabelWidth, kDebugLabelHeight);
+        consoleLabelFrame = CGRectMake((KDebugWindowWidth - kDebugLabelWidth) / 2, 0, kDebugLabelWidth, kDebugLabelHeight);
     } else if (consoleLabel == self.fpsLabel) {
-        consoleLabelFrame = CGRectMake((kDebugScreenWidth + kDebugLabelWidth)/2 + KDebugMargin, 0, kDebugLabelWidth, kDebugLabelHeight);
+        consoleLabelFrame = CGRectMake((KDebugWindowWidth + kDebugLabelWidth)/2 + KDebugMargin, 0, kDebugLabelWidth, kDebugLabelHeight);
     } else {
-        consoleLabelFrame = CGRectMake((kDebugScreenWidth - kDebugLabelWidth) / 2 - KDebugMargin - kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight);
+        consoleLabelFrame = CGRectMake((KDebugWindowWidth - kDebugLabelWidth) / 2 - KDebugMargin - kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight);
     }
     [UIView animateWithDuration:0.3 animations:^{
         consoleLabel.frame = consoleLabelFrame;
@@ -143,9 +141,9 @@ static id _instance;
 
 - (void)hide {
     [UIView animateWithDuration:0.3 animations:^{
-        self.cpuLabel.frame = CGRectMake((kDebugScreenWidth - kDebugLabelWidth) / 2, -kDebugLabelHeight, kDebugLabelWidth, kDebugLabelHeight);
+        self.cpuLabel.frame = CGRectMake((KDebugWindowWidth - kDebugLabelWidth) / 2, -kDebugLabelHeight, kDebugLabelWidth, kDebugLabelHeight);
         self.memoryLabel.frame = CGRectMake(-kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight);
-        self.fpsLabel.frame = CGRectMake(kDebugScreenWidth + kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight);
+        self.fpsLabel.frame = CGRectMake(KDebugWindowWidth + kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight);
     }completion:^(BOOL finished) {
         [self clearUp];
     }];
@@ -179,14 +177,14 @@ static id _instance;
 
 -(WDDebugConsoleLabel *)cpuLabel {
     if (!_cpuLabel) {
-        _cpuLabel = [[WDDebugConsoleLabel alloc] initWithFrame:CGRectMake((kDebugScreenWidth - kDebugLabelWidth) / 2, -kDebugLabelHeight, kDebugLabelWidth, kDebugLabelHeight)];
+        _cpuLabel = [[WDDebugConsoleLabel alloc] initWithFrame:CGRectMake((KDebugWindowWidth - kDebugLabelWidth) / 2, -kDebugLabelHeight, kDebugLabelWidth, kDebugLabelHeight)];
     }
     return _cpuLabel;
 }
 
 - (WDDebugConsoleLabel *)fpsLabel {
     if (!_fpsLabel) {
-        _fpsLabel = [[WDDebugConsoleLabel alloc] initWithFrame:CGRectMake(kDebugScreenWidth + kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight)];
+        _fpsLabel = [[WDDebugConsoleLabel alloc] initWithFrame:CGRectMake(KDebugWindowWidth + kDebugLabelWidth, 0, kDebugLabelWidth, kDebugLabelHeight)];
     }
     return _fpsLabel;
 }
