@@ -13,8 +13,25 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-WDDebugTool is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Swift Package Manager (Recommended)
+
+In Xcode, select **File** > **Add Package Dependencies...**, and enter the repository URL:
+
+```text
+https://github.com/jocelen/WDDebugTool.git
+```
+
+Or add it to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/jocelen/WDDebugTool.git", from: "0.1.2")
+]
+```
+
+### CocoaPods
+
+Add the following line to your `Podfile`:
 
 ```ruby
 pod 'WDDebugTool'
