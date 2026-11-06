@@ -22,7 +22,9 @@
 WHSingletonM()
 
 - (void)startMonitoring {
+    [self stopMonitoring];
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkTicks:)];
+    _displayLink.preferredFrameRateRange = CAFrameRateRangeMake(10, 120, 120);
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
@@ -44,6 +46,9 @@ WHSingletonM()
 
 - (void)stopMonitoring {
     [_displayLink invalidate];
+    _displayLink = nil;
+    _lastTimestamp = 0;
+    _performTimes = 0;
 }
 
 @end

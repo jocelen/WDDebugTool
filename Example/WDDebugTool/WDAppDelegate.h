@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface WDAppDelegate : UIResponder <UIApplicationDelegate>
+@interface WDAppDelegate : UIResponder <UIApplicationDelegate, UIWindowSceneDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

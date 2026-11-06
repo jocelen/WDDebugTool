@@ -24,13 +24,8 @@
     self.textAlignment = NSTextAlignmentCenter;
     self.userInteractionEnabled = YES;
     self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
-    _font = [UIFont fontWithName:@"Menlo" size:14];
-    if (_font) {
-        _subFont = [UIFont fontWithName:@"Menlo" size:4];
-    } else {
-        _font = [UIFont fontWithName:@"Courier" size:14];
-        _subFont = [UIFont fontWithName:@"Courier" size:4];
-    }
+    _font = [UIFont monospacedDigitSystemFontOfSize:14 weight:UIFontWeightMedium];
+    _subFont = [UIFont monospacedDigitSystemFontOfSize:4 weight:UIFontWeightRegular];
 }
 
 - (void)updateLabelWith:(DebugToolLabelType)labelType value:(float)value {
@@ -52,7 +47,8 @@
 #pragma mark - NSAttributedString
 
 - (NSAttributedString *)fpsAttributedStringWith:(float)fps {
-    CGFloat progress = fps / 60.0;
+    NSInteger maxFPS = [UIScreen mainScreen].maximumFramesPerSecond ?: 60;
+    CGFloat progress = fps / (CGFloat)maxFPS;
     UIColor *color = [UIColor colorWithHue:0.27 * (progress - 0.2) saturation:1 brightness:0.9 alpha:1];
     NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d FPS",(int)round(fps)]];
     [text addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, text.length - 3)];
@@ -63,8 +59,12 @@
 }
 
 - (NSAttributedString *)memoryAttributedStringWith:(float)memory {
-    CGFloat progress = memory / 350;
-    UIColor *color = [self getColorByPercent:progress];;
+    CGFloat maxMemory = ([NSProcessInfo processInfo].physicalMemory / (1024.0 * 1024.0)) * 0.15;
+    if (maxMemory < 350.0) {
+        maxMemory = 350.0;
+    }
+    CGFloat progress = memory / maxMemory;
+    UIColor *color = [self getColorByPercent:progress];
     NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%.1f M",memory]];
     [text addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, text.length - 1)];
     [text addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(text.length - 1, 1)];

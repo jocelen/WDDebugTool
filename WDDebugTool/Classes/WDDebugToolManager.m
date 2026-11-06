@@ -80,43 +80,35 @@ static id _instance;
 #pragma mark - Window
 
 - (UIWindowScene *)activeScene {
-    if (@available(iOS 13.0, *)) {
-        for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
-            if ([scene isKindOfClass:[UIWindowScene class]] && scene.activationState == UISceneActivationStateForegroundActive) {
-                return (UIWindowScene *)scene;
-            }
+    for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
+        if ([scene isKindOfClass:[UIWindowScene class]] && scene.activationState == UISceneActivationStateForegroundActive) {
+            return (UIWindowScene *)scene;
         }
-        for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
-            if ([scene isKindOfClass:[UIWindowScene class]]) {
-                return (UIWindowScene *)scene;
-            }
+    }
+    for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
+        if ([scene isKindOfClass:[UIWindowScene class]]) {
+            return (UIWindowScene *)scene;
         }
     }
     return nil;
 }
 
 - (void)onSceneActive:(NSNotification *)noti {
-    if (@available(iOS 13.0, *)) {
-        if ([noti.object isKindOfClass:[UIWindowScene class]] && !self.debugWindow.windowScene) {
-            UIWindowScene *scene = (UIWindowScene *)noti.object;
-            self.debugWindow.windowScene = scene;
-            CGFloat screenWidth = scene.coordinateSpace.bounds.size.width;
-            CGRect frame = self.debugWindow.frame;
-            frame.origin.x = (screenWidth - KDebugWindowWidth) / 2;
-            self.debugWindow.frame = frame;
-            self.debugWindow.hidden = NO;
-            [[NSNotificationCenter defaultCenter] removeObserver:self name:UISceneDidActivateNotification object:nil];
-        }
+    if ([noti.object isKindOfClass:[UIWindowScene class]] && !self.debugWindow.windowScene) {
+        UIWindowScene *scene = (UIWindowScene *)noti.object;
+        self.debugWindow.windowScene = scene;
+        CGFloat screenWidth = scene.coordinateSpace.bounds.size.width;
+        CGRect frame = self.debugWindow.frame;
+        frame.origin.x = (screenWidth - KDebugWindowWidth) / 2;
+        self.debugWindow.frame = frame;
+        self.debugWindow.hidden = NO;
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:UISceneDidActivateNotification object:nil];
     }
 }
 
 - (void)setDebugWindow {
     UIWindowScene *scene = [self activeScene];
-    if (@available(iOS 13.0, *)) {
-        self.debugWindow = scene ? [[UIWindow alloc] initWithWindowScene:scene] : [[UIWindow alloc] initWithFrame:CGRectZero];
-    } else {
-        self.debugWindow = [[UIWindow alloc] initWithFrame:CGRectZero];
-    }
+    self.debugWindow = scene ? [[UIWindow alloc] initWithWindowScene:scene] : [[UIWindow alloc] initWithFrame:CGRectZero];
     CGFloat screenWidth = scene ? scene.coordinateSpace.bounds.size.width : [UIScreen mainScreen].bounds.size.width;
     self.debugWindow.frame = CGRectMake((screenWidth - KDebugWindowWidth) / 2, 20, KDebugWindowWidth, kDebugLabelHeight);
     self.debugWindow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
@@ -132,10 +124,8 @@ static id _instance;
     self.debugWindow.rootViewController = vc;
     self.debugWindow.hidden = NO;
 
-    if (@available(iOS 13.0, *)) {
-        if (!self.debugWindow.windowScene) {
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onSceneActive:) name:UISceneDidActivateNotification object:nil];
-        }
+    if (!self.debugWindow.windowScene) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onSceneActive:) name:UISceneDidActivateNotification object:nil];
     }
 }
 
@@ -198,9 +188,7 @@ static id _instance;
 #pragma mark - Clear
 
 - (void)clearUp {
-    if (@available(iOS 13.0, *)) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:UISceneDidActivateNotification object:nil];
-    }
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UISceneDidActivateNotification object:nil];
     [[WDDebugFPSMonitor sharedInstance] stopMonitoring];
     [[WDDebugMemoryMonitor sharedInstance] stopMonitoring];
     [[WDDebugCpuMonitor sharedInstance] stopMonitoring];
