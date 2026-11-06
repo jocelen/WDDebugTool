@@ -6,6 +6,7 @@
 //
 
 #import "WDDebugFPSMonitor.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface WDDebugFPSMonitor()
 

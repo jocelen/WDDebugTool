@@ -6,6 +6,7 @@
 //
 
 #import "WDDebugMonitor.h"
+#import <QuartzCore/QuartzCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
